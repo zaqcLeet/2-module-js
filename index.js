@@ -1,13 +1,17 @@
 let sum = 0;
-let a = prompt('Введите число:');
+let number = prompt('Введите число:');
 
-while (a !== null) {
- if (isNaN(a)){
-   a = 0;
+while (number !== null) {
+ if (isNaN(number)) {
+   number = 0;
  } else { 
-   sum = sum + parseInt(a);
-   a = prompt ('Введите число:');
+   sum += parseInt(number);
+   number = prompt ('Введите число:');
  }
 }
 
 alert ('Сумма введенных чисел: ' + sum + '.');
+
+// от else нужно избавится
+// Код, в теле цикла, можно сократить до получения ввода и одного if уcловия.
+// вводим пробел, вводим число, жмем Отмена - "Сумма введенных чисел: NaN." - программа не работает корректно.
